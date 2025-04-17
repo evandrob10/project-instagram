@@ -8,7 +8,7 @@ import {useRouter} from 'next/navigation';
 export default function ContainerDownload({itemDownload, error} : {itemDownload: string, error: string}) {
     const [url ,  setUrl] = useState("");
     const [urlValid, setUrlValid] = useState(false);
-    const [controlError, setControlError] = useState(error && true);
+    const [controlError, setControlError] = useState(error === "url_download" && true);
 
     const router = useRouter();
 
