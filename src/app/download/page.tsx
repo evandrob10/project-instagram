@@ -35,7 +35,7 @@ export default async function download({ searchParams }: PropsType) {
       </section>
     )
   }catch{
-    redirect(`/?url_error`);
+    redirect(`/?error=url_download`);
   }
 
 }
