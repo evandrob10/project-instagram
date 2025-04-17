@@ -3,7 +3,7 @@ import { redirect } from 'next/navigation'
 import { instagramGetUrl } from "instagram-url-direct";
 
 //Components
-import ButtonDownload from "../Components/Download/Components/ButtonDownload";
+import Button from "../Components/Download/Components/Button";
 
 interface PropsType {
   searchParams: {
@@ -13,12 +13,12 @@ interface PropsType {
 
 export default async function download({ searchParams }: PropsType) {
 
-  try{
+  try {
     const data = await instagramGetUrl(searchParams.url);
 
     return (
       <section className="flex flex-col justify-center items-center py-5">
-  
+
         <figure className="overflow-hidden">
           <Image
             alt=""
@@ -27,14 +27,17 @@ export default async function download({ searchParams }: PropsType) {
             src={data.media_details[0].thumbnail && data.media_details[0].type !== "image" ? data.media_details[0].thumbnail : data.media_details[0].url}
             style={{
               objectFit: "cover",
-              transform: "scale(1.1)"
+              transform: "scale(1.1)",
             }}
           />
         </figure>
-        <ButtonDownload url={data.url_list[0]} />
+        <div className="mt-5 w-3xs flex justify-between">
+          <Button url={"/"} bgCor="bg-gray-500" text="VOLTAR" opacity="opacity-50" />
+          <Button url={data.url_list[0]} bgCor="bg-insta-buttons" text="BAIXAR" target="_blank" />
+        </div>
       </section>
     )
-  }catch{
+  } catch {
     redirect(`/?error=url_download`);
   }
 
