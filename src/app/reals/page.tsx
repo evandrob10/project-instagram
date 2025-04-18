@@ -12,7 +12,7 @@ export default function page({searchParams} : searchParamsType) {
 
   return (
     <main className="flex flex-col justify-center items-center w-full">
-      <ContainerDownload itemDownload="Reals" error={params}/>
+      <ContainerDownload itemDownload="reals" error={params}/>
     </main>
   );
 }
