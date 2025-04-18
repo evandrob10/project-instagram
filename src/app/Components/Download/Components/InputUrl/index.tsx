@@ -1,9 +1,10 @@
 interface InputUrlTypes{
   setUrl: (string: string) => void,
-  authenticateUrl: (boolean: boolean)=> void,
+  authenticateUrl: (boolean: boolean)=> void
 }
 
 export default function InputUrl({setUrl, authenticateUrl} : InputUrlTypes) {
+
   const authenticate = (url : string) => {
     if(!url.includes('https://www.instagram.com/')) return false;
     return true;

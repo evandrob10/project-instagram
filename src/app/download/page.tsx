@@ -14,6 +14,7 @@ interface PropsType {
 
 export default async function download({ searchParams }: PropsType) {
   const page = searchParams.page.replace(" ","-");
+  const urlBack = (searchParams.page != "videos") ? "/" + page : "/";
   try {
     const data = await instagramGetUrl(searchParams.url);
 
@@ -34,7 +35,7 @@ export default async function download({ searchParams }: PropsType) {
             />
           </figure>
           <div className="mt-5 w-3xs flex justify-between">
-            <Button url={(searchParams.page != "videos") ? "/" + page : "/"} bgCor="bg-gray-500" text="VOLTAR" opacity="opacity-50" />
+            <Button url={urlBack} bgCor="bg-gray-500" text="VOLTAR" opacity="opacity-50" />
             <Button url={data.url_list[0]} bgCor="bg-insta-buttons" text="BAIXAR" target="_blank" />
           </div>
         </section>
@@ -63,11 +64,11 @@ export default async function download({ searchParams }: PropsType) {
               </div>
             ))}
           </div>
-          <Button url={(searchParams.page != "videos") ? "/" + page : "/"} bgCor="bg-gray-500" text="VOLTAR" width="w-[50vw] sm:w-[10vw]" />
+          <Button url={urlBack} bgCor="bg-gray-500" text="VOLTAR" width="w-[50vw] sm:w-[10vw]" />
         </section>
       )
     }
   } catch {
-    redirect(`/${page}?error=url_download`);
+    redirect(`/${urlBack}?error=url_download&url=${searchParams.url}`);
   }
 }

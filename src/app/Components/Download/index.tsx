@@ -8,14 +8,13 @@ import { useRouter } from 'next/navigation';
 
 
 
-export default function ContainerDownload({ itemDownload, error }: { itemDownload: string, error: string }) {
+export default function ContainerDownload({ itemDownload, error }: { itemDownload: string, error: string}) {
     const [url, setUrl] = useState("");
     const [urlValid, setUrlValid] = useState(false);
     const [controlError, setControlError] = useState(error === "url_download" && true);
 
     const router = useRouter();
 
-    useEffect(() => setUrl(""), [error]);
     useEffect(() => { if (url.length > 0) setControlError(false); }, [url])
     useEffect(() => { if (urlValid) router.push(`/download?page=${itemDownload}&url=${url}`) }, [url])
 
@@ -25,7 +24,7 @@ export default function ContainerDownload({ itemDownload, error }: { itemDownloa
         <section className="w-[90%] md:w-[60%] xl:w-[50%] h-[50%] text-center">
             <h2 className="font-bold text-4xl xl:text-5xl mb-10 text-insta-basic">Download <span className="py-1 px-2 rounded-2xl opacity-90 bg-insta-basic text-amber-50 animate-videos">{itemDownload}</span> do instagram</h2>
             <div className="mb-2">
-                <InputUrl setUrl={setUrl} authenticateUrl={setUrlValid} />
+                <InputUrl setUrl={setUrl} authenticateUrl={setUrlValid}/>
             </div>
             <Nav />
             {(controlError) && message}
