@@ -19,7 +19,7 @@ export default function ContainerDownload({ itemDownload, error }: { itemDownloa
     useEffect(() => { if (url.length > 0) setControlError(false); }, [url])
     useEffect(() => { if (urlValid) router.push(`/download?page=${itemDownload}&url=${url}`) }, [url])
 
-    const message = <p className="text-[red] text-[18px] mt-2">URL inserida é inválida!</p>;
+    const message = <p className="text-[red] text-[18px] mt-3">URL inserida é inválida!</p>;
 
     return (
         <section className="w-[90%] md:w-[60%] xl:w-[50%] h-[50%] text-center">
@@ -27,9 +27,9 @@ export default function ContainerDownload({ itemDownload, error }: { itemDownloa
             <div className="mb-2">
                 <InputUrl setUrl={setUrl} authenticateUrl={setUrlValid} />
             </div>
+            <Nav />
             {(controlError) && message}
             {(!urlValid && url.length > 26) && message}
-            <Nav />
         </section>
     )
 }

@@ -13,9 +13,8 @@ interface PropsType {
 }
 
 export default async function download({ searchParams }: PropsType) {
-
+  const page = searchParams.page.replace(" ","-");
   try {
-    const page = searchParams.page.replace(" ","-");
     const data = await instagramGetUrl(searchParams.url);
 
     if (data.url_list.length == 1) {
@@ -69,7 +68,6 @@ export default async function download({ searchParams }: PropsType) {
       )
     }
   } catch {
-    redirect(`/?error=url_download`);
+    redirect(`/${page}?error=url_download`);
   }
-
 }
