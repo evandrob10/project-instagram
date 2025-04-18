@@ -22,8 +22,8 @@ export default function ContainerDownload({ itemDownload, error }: { itemDownloa
     const message = <p className="text-[red] text-[18px] mt-2">URL inserida é inválida!</p>;
 
     return (
-        <section className="w-[50%] h-[50%] text-center">
-            <h2 className="font-bold text-4xl mb-10 text-insta-basic">Download <span className="py-1 px-2 rounded-2xl opacity-90 bg-insta-basic text-amber-50 animate-videos">{itemDownload}</span> do instagram</h2>
+        <section className="w-[90%] md:w-[60%] xl:w-[50%] h-[50%] text-center">
+            <h2 className="font-bold text-4xl xl:text-5xl mb-10 text-insta-basic">Download <span className="py-1 px-2 rounded-2xl opacity-90 bg-insta-basic text-amber-50 animate-videos">{itemDownload}</span> do instagram</h2>
             <div className="mb-2">
                 <InputUrl setUrl={setUrl} authenticateUrl={setUrlValid} />
             </div>

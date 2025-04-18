@@ -21,7 +21,7 @@ export default async function download({ searchParams }: PropsType) {
       return (
         <section className="flex flex-col justify-center items-center py-5">
 
-          <figure className="overflow-hidden">
+          <figure className="overflow-hidden h-[80%]">
             <Image
               alt=""
               width={300}
@@ -41,8 +41,8 @@ export default async function download({ searchParams }: PropsType) {
       )
     } else {
       return (
-        <section className="flex flex-col justify-center items-center py-5 mb-5">
-          <div className="flex flex-wrap justify-center items-center mb-5">
+        <section className="flex flex-col justify-center items-center p-5 mb-5">
+          <div className="flex flex-wrap items-center mb-5">
             {data.url_list.map((element, index) => (
               <div key={index} className="m-1">
                 <figure className="overflow-hidden">
