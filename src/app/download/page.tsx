@@ -15,6 +15,7 @@ interface PropsType {
 export default async function download({ searchParams }: PropsType) {
 
   try {
+    const page = searchParams.page.replace(" ","-");
     const data = await instagramGetUrl(searchParams.url);
 
     if (data.url_list.length == 1) {
@@ -34,7 +35,7 @@ export default async function download({ searchParams }: PropsType) {
             />
           </figure>
           <div className="mt-5 w-3xs flex justify-between">
-            <Button url={(searchParams.page != "videos") ? "/" + searchParams.page : "/"} bgCor="bg-gray-500" text="VOLTAR" opacity="opacity-50" />
+            <Button url={(searchParams.page != "videos") ? "/" + page : "/"} bgCor="bg-gray-500" text="VOLTAR" opacity="opacity-50" />
             <Button url={data.url_list[0]} bgCor="bg-insta-buttons" text="BAIXAR" target="_blank" />
           </div>
         </section>
@@ -63,7 +64,7 @@ export default async function download({ searchParams }: PropsType) {
               </div>
             ))}
           </div>
-          <Button url={(searchParams.page != "videos") ? "/" + searchParams.page : "/"} bgCor="bg-gray-500" text="VOLTAR" width="w-[50vw] sm:w-[10vw]" />
+          <Button url={(searchParams.page != "videos") ? "/" + page : "/"} bgCor="bg-gray-500" text="VOLTAR" width="w-[50vw] sm:w-[10vw]" />
         </section>
       )
     }
