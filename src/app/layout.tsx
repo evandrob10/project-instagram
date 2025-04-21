@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 //COMPONENTS
 import Header from "./Components/Header";
-import Footer from  "./Components/Footer";
+import Footer from "./Components/Footer";
 
 
 export const metadata: Metadata = {
@@ -19,7 +19,9 @@ export default function RootLayout({
     <html lang="pt-br">
       <body className="h-screen flex flex-col justify-between">
         <Header />
-        {children}
+        <main className="flex flex-col justify-center items-center w-full">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
