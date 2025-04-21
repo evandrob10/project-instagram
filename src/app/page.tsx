@@ -1,19 +1,8 @@
-//COMPONENTS:
-import ContainerDownload from "./Components/Download";
+import Pagination from './Components/Pagination'
 
-interface searchParamsType{
-  searchParams:{
-    error: string,
-    url : string
-  }
-}
-
-export default function page({searchParams} : searchParamsType) {
-  const {error} = searchParams;
+export default function page() {
   return (
-    <>
-      <ContainerDownload itemDownload="videos" error={error}/>
-    </>
-  );
+    <Pagination />
+  )
 }
 
