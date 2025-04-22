@@ -1,4 +1,4 @@
-export default function Paragrafo({ text, p1, clickId ,children }: { text?: string, p1?: string , clickId: string, children?: React.ReactNode }) {
+export default function Paragrafo({ text, p1, clickId ,children }: { text?: string, p1?: string , clickId?: string, children?: React.ReactNode }) {
     if (text) {
         if(!p1) return <p className="my-3" > {text}</p>
         return  <p className="my-3 hidden" > {text}</p>
