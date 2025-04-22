@@ -3,6 +3,7 @@ import "./globals.css";
 //COMPONENTS
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
+import BackTop from "./Components/BackTop";
 
 
 export const metadata: Metadata = {
@@ -19,8 +20,9 @@ export default function RootLayout({
     <html lang="pt-br">
       <body className="flex flex-col justify-between">
         <Header />
-        <main className="flex h-[100%] flex-col justify-center items-center w-full">
+        <main className="flex h-[100%] flex-col justify-center items-center w-full relative">
           {children}
+          <BackTop />
         </main>
         <Footer />
       </body>

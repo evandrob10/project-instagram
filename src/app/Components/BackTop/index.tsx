@@ -1,10 +1,14 @@
-'use client'
-import Link from "next/link";
-//hooks
+"use client"
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
-export default function Header() {
+export default function BackTop() {
   const [scrollY, setScrollY] = useState(0);
+  // Função que vai rolar a página para o topo ao clicar
+  const handleClick = () => {
+    window.scrollTo(0, 0); // Rola para a posição (0, 0), ou seja, o topo da página
+  };
+
 
   // Efeito para capturar a rolagem
   useEffect(() => {
@@ -22,10 +26,13 @@ export default function Header() {
     };
   }, []); // O array vazio significa que o efeito será executado uma única vez (ao montar o componente)
   return (
-    <header className={`flex items-center justify-center py-3 mt-2 fixed w-full ${scrollY < 1 ? "" : "hidden"}`}>
-      <Link href={"/"}>
-        <h1 className="bg-insta-basic text-center text-[#fff] text-2xl xl:text-3xl font-bold p-1"><span className="bg-[#FFFF] text-insta-basic p-1">INSTASAVER</span> HUB</h1>
-      </Link>
-    </header>
+    <Image
+      width={50}
+      height={50}
+      src={"./icons/back-top1.svg"}
+      alt="Botão para voltar ao topo"
+      onClick={handleClick}
+      className={`cursor-pointer fixed bottom-20 right-5 z-40 ${(scrollY < 400) ? "hidden" : ""}`}
+    />
   )
 }
