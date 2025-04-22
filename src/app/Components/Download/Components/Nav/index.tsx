@@ -36,7 +36,7 @@ export default function Nav() {
     ]
 
     return (
-        <nav>
+        <nav className='w-full'>
             <ul className="flex flex-wrap justify-evenly">
                 {itemsNav.map(({url,text}, index) => (
                     <Link key={index} href={url}>

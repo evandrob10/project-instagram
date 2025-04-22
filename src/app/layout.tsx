@@ -17,9 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className="h-screen flex flex-col justify-between">
+      <body className="flex flex-col justify-between">
         <Header />
-        <main className="flex flex-col justify-center items-center w-full">
+        <main className="flex h-[100%] flex-col justify-center items-center w-full">
           {children}
         </main>
         <Footer />
