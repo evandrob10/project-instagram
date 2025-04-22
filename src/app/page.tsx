@@ -7,9 +7,16 @@ import Paragrafo from './Components/Content/Components/Paragrafo';
 import Section from './Components/Content/Components/Section';
 import { Li, Ol, Ul } from './Components/Content/Components/Listas';
 import Links from './Components/Content/Components/Links';
+import Quests from './Components/Content/Components/Quests';
 
 export default function page() {
-  const quests = [
+  type QuestType = {
+    quest: string,
+    response: string
+  }
+
+
+  const quests: QuestType[] = [
     {
       quest: "1. O InstaSave Hub é gratuito?",
       response: "Sim, o InstaSave Hub é 100% gratuito e não exige assinatura ou pagamento."
@@ -206,12 +213,7 @@ export default function page() {
         </Section>
         <Section>
           <H2 text="Perguntas Frequentes sobre o InstaSave Hub" />
-          {quests.map((element,index)=>(
-            <div key={index}>
-                <H3 text={element.quest} p1={'p' + index}/>
-                <Paragrafo p1={'p' + index}>{element.response}</Paragrafo>
-            </div>
-          ))}
+          <Quests quests={quests} />
         </Section>
       </Content>
     </>
