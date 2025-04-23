@@ -22,7 +22,7 @@ export default function Header() {
     };
   }, []); // O array vazio significa que o efeito será executado uma única vez (ao montar o componente)
   return (
-    <header className={`flex items-center justify-center py-3 mt-2 fixed w-full ${scrollY < 1 ? "" : "hidden"}`}>
+    <header className={`flex items-center justify-center py-3 mt-2 fixed w-full ${scrollY < 1 ? "" : "hidden"} z-50`}>
       <Link href={"/"}>
         <h1 className="bg-insta-basic text-center text-[#fff] text-2xl xl:text-3xl font-bold p-1"><span className="bg-[#FFFF] text-insta-basic p-1">INSTASAVER</span> HUB</h1>
       </Link>

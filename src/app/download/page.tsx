@@ -20,9 +20,9 @@ export default async function download({ searchParams }: PropsType) {
 
     if (data.url_list.length == 1) {
       return (
-        <section className="flex flex-col justify-center items-center py-5">
+        <section className="min-h-[92vh] mt-[10vh] sm:mt-[0] flex flex-col justify-center items-center py-5">
 
-          <figure className="overflow-hidden h-[80%]">
+          <figure className="overflow-hidden">
             <Image
               alt=""
               width={300}
@@ -42,8 +42,8 @@ export default async function download({ searchParams }: PropsType) {
       )
     } else {
       return (
-        <section className="flex flex-col justify-center items-center p-5 mb-5">
-          <div className="flex flex-wrap items-center mb-5">
+        <section className="min-h-[92vh] mt-[10vh] sm:mt-[0] flex flex-col justify-around items-center p-5 mb-5">
+          <div className="flex flex-wrap items-center justify-center mb-5">
             {data.url_list.map((element, index) => (
               <div key={index} className="m-1">
                 <figure className="overflow-hidden">
@@ -54,11 +54,10 @@ export default async function download({ searchParams }: PropsType) {
                     src={data.media_details[index].thumbnail && data.media_details[index].type !== "image" ? data.media_details[index].thumbnail : data.media_details[index].url}
                     style={{
                       objectFit: "cover",
-                      transform: "scale(1.1)",
                     }}
                   />
                 </figure>
-                <div className="my-2 w-3xs flex justify-center">
+                <div className="my-2 w-full flex justify-center">
                   <Button url={element} bgCor="bg-insta-buttons" text="BAIXAR" target="_blank" />
                 </div>
               </div>
