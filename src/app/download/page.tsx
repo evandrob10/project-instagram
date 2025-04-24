@@ -5,18 +5,17 @@ import { instagramGetUrl } from "instagram-url-direct";
 //Components
 import Button from "../Components/Download/Components/Button";
 
-interface PropsType {
-  searchParams: {
+type PropsType = Promise<{
     page: string
     url: string
-  }
-}
+}>
 
-export default async function download({ searchParams }: PropsType) {
-  const page = searchParams.page.replace(" ","-");
-  const urlBack = (searchParams.page != "videos") ? "/" + page : "/";
+export default async function download({searchParams} : { searchParams : PropsType}) {
+  const params = await searchParams;
+  const page = params.page.replace(" ","-");
+  const urlBack = (params.page != "videos") ? "/" + page : "/";
   try {
-    const data = await instagramGetUrl(searchParams.url);
+    const data = await instagramGetUrl(params.url);
 
     if (data.url_list.length == 1) {
       return (
@@ -68,6 +67,6 @@ export default async function download({ searchParams }: PropsType) {
       )
     }
   } catch {
-    redirect(`/${urlBack}?error=url_download&url=${searchParams.url}`);
+    redirect(`/${urlBack}?error=url_download&url=${params.url}`);
   }
 }
