@@ -90,7 +90,8 @@ export default function page() {
           <Paragrafo>O InstaSave Hub garante segurança com conexão HTTPS, sem armazenamento de imagens ou dados pessoais.</Paragrafo>
         </Section>
         <Section>
-          <Paragrafo>O <strong>InstaSave Hub</strong> é a ferramenta ideal para baixar imagens do Instagram de forma prática e segura. Com este guia, você pode salvar fotos para uso offline, arquivamento ou projetos criativos. <Links text='Saiba como baixar multiplicas imagens de forma gratuita.' url='/multi-imagens' /></Paragrafo>
+          <Paragrafo>O <strong>InstaSave Hub</strong> é a ferramenta ideal para baixar imagens do Instagram de forma prática e segura. Com este guia, você pode salvar fotos para uso offline, arquivamento ou projetos criativos. </Paragrafo>
+          <Links text='Veja como baixar imagens dos carrosséis do Instagram.' url='/carroséis'/>
         </Section>
         <Section>
           <Quests />

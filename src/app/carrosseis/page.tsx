@@ -122,6 +122,7 @@ export default function page() {
           <Paragrafo>
             Com o <strong>InstaSave Hub</strong>, baixar vídeos e imagens de carrosséis do Instagram é um processo simples e rápido. Basta copiar o link, colar no site, escolher o conteúdo e salvar. Experimente hoje e aproveite seus conteúdos favoritos offline!
           </Paragrafo>
+          <Links text='Veja como baixar um vídeo do Instagram.' url='/'/>
         </Section>
         <Section>
           <Quests />

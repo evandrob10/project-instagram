@@ -110,6 +110,7 @@ export default function page() {
 
         <Section>
           <Paragrafo>O <strong>InstaSave Hub</strong> é a melhor escolha para baixar Reels do Instagram de forma prática e segura. Com este guia, você está pronto para salvar seus vídeos favoritos e usá-los como quiser. </Paragrafo>
+          <Links text='Veja como baixar uma imagem do Instagram.' url='/imagens'/>
         </Section>
         <Section>
           <Quests />
