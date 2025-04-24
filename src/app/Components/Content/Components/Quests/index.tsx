@@ -4,11 +4,17 @@ import { H2, H3 } from "../Titles"
 import Paragrafo from "../Paragrafo"
 //Hooks
 import { useState } from 'react'
+import Links from "../Links"
+import { Li, Ol } from "../Listas"
 
 
 type QuestType = {
     quest: string,
     response: string
+    _url?: {
+        title: string,
+        link: string
+    }[]
 }
 
 export default function Quests() {
@@ -33,7 +39,17 @@ export default function Quests() {
         },
         {
             quest: "5. É legal baixar vídeos do Instagram?",
-            response: "Baixar vídeos para uso pessoal é geralmente aceitável, mas redistribuir ou usar o conteúdo sem permissão pode violar os termos de uso do Instagram ou leis de direitos autorais."
+            response: `Baixar vídeos para uso pessoal é geralmente aceitável, mas redistribuir ou usar o conteúdo sem permissão pode violar os termos de uso do Instagram ou leis de direitos autorais.`,
+            _url: [
+                {
+                    title: "termos de uso do Instagram",
+                    link: "https://help.instagram.com/581066165581870/?locale=pt_PT&hl=pt"
+                },
+                {
+                    title: "leis de direitos autorais",
+                    link: "https://www.planalto.gov.br/ccivil_03/leis/l9610.htm"
+                }
+            ]
         },
     ]
 
@@ -51,6 +67,13 @@ export default function Quests() {
                 <div key={index}>
                     <H3 text={element.quest} p1={'p' + index} onClickId={handlerClickId} />
                     <Paragrafo p1={'p' + index} clickId={clickId}>{element.response}</Paragrafo>
+                    <Paragrafo key={index} p1={'p' + index} clickId={clickId}>
+                        <Ol>
+                            {element._url && element._url.map((element, index) => (
+                               <Li key={index}><Links text={element.title} url={element.link} /></Li>
+                            ))}
+                        </Ol>
+                    </Paragrafo>
                 </div>
             ))}
         </>
