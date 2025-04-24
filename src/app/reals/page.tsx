@@ -11,6 +11,40 @@ import { Li, Ol, Ul } from '../Components/Content/Components/Listas';
 import Links from '../Components/Content/Components/Links';
 import Quests from '../Components/Content/Components/Quests';
 
+import { Metadata } from 'next';
+import GenerateMetadata from '../Metadata';
+
+
+interface MetaType {
+  title: string | null
+  description: string | null
+  keywords: string [] | null
+}
+
+const metas: MetaType = {
+  title: "Reals",
+  description: null,
+  keywords : [
+    "baixar Reels do Instagram",
+    "download Reels Instagram",
+    "salvar Reels Instagram",
+    "baixar vídeos Reels Instagram",
+    "baixar Reels Instagram grátis",
+    "baixar Reels Instagram sem aplicativo",
+    "baixar Reels Instagram com link",
+    "baixar Reels Instagram para Android",
+    "baixar Reels Instagram para iPhone",
+    "baixar Reels Instagram para PC",
+    "baixar Reels Instagram com áudio",
+    "baixar Reels Instagram em MP4",
+    "baixar Reels Instagram sem marca d'água",
+    "baixar Reels Instagram online",
+    "baixar Reels Instagram sem login"
+  ]
+}
+
+export const metadata: Metadata = GenerateMetadata(metas);
+
 export default function page() {
   return (
     <>

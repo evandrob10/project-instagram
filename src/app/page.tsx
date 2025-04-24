@@ -1,4 +1,7 @@
 import Image from 'next/image';
+import type { Metadata } from "next";
+//Metadata:
+import GenerateMetadata from "./Metadata";
 //Container Download
 import Pagination from './Components/Pagination'
 //Components tag:
@@ -10,6 +13,37 @@ import Section from './Components/Content/Components/Section';
 import { Li, Ol, Ul } from './Components/Content/Components/Listas';
 import Links from './Components/Content/Components/Links';
 import Quests from './Components/Content/Components/Quests';
+
+
+interface MetaType {
+  title: string | null
+  description: string | null
+  keywords: string[] | null
+}
+
+const metas: MetaType = {
+  title: "Vídeos",
+  description: null,
+  keywords : [
+    "baixar vídeos do Instagram",
+    "download Instagram",
+    "salvar vídeos Instagram",
+    "baixar Reels Instagram",
+    "baixar Stories Instagram",
+    "baixar vídeos do feed do Instagram",
+    "baixar vídeos do IGTV",
+    "baixar vídeos do Instagram online",
+    "baixar vídeos do Instagram grátis",
+    "baixar vídeos do Instagram sem aplicativo",
+    "baixar vídeos do Instagram com link",
+    "baixar vídeos do Instagram para Android",
+    "baixar vídeos do Instagram para iPhone",
+    "baixar vídeos do Instagram para PC",
+    "baixar vídeos do Instagram com áudio"
+  ]
+}
+
+export const metadata: Metadata = GenerateMetadata(metas);
 
 export default function page() {
   return (

@@ -9,6 +9,39 @@ import { Li, Ol, Ul } from '../Components/Content/Components/Listas';
 import Links from '../Components/Content/Components/Links';
 import Pagination from "../Components/Pagination";
 import Quests from '../Components/Content/Components/Quests';
+import { Metadata } from 'next';
+import GenerateMetadata from '../Metadata';
+
+
+interface MetaType {
+  title: string | null
+  description: string | null
+  keywords: string [] | null
+}
+
+const metas: MetaType = {
+  title: "Imagens",
+  description: null,
+  keywords : [
+    "baixar imagens do Instagram",
+    "download Instagram",
+    "salvar imagens Instagram",
+    "baixar fotos Instagram",
+    "baixar imagens do feed do Instagram",
+    "baixar fotos do Instagram online",
+    "baixar imagens do Instagram grátis",
+    "baixar imagens do Instagram sem aplicativo",
+    "baixar imagens do Instagram com link",
+    "baixar imagens do Instagram para Android",
+    "baixar imagens do Instagram para iPhone",
+    "baixar imagens do Instagram para PC",
+    "baixar imagens do Instagram com áudio",
+    "baixar imagens do Instagram em alta qualidade",
+    "baixar imagens do Instagram sem marca d'água"
+  ]
+}
+
+export const metadata: Metadata = GenerateMetadata(metas);
 
 export default function page() {
   return (

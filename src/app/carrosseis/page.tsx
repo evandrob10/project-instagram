@@ -10,6 +10,40 @@ import { Li, Ol, Ul } from '../Components/Content/Components/Listas';
 import Links from '../Components/Content/Components/Links';
 import Quests from '../Components/Content/Components/Quests';
 
+import { Metadata } from 'next';
+import GenerateMetadata from '../Metadata';
+
+
+interface MetaType {
+  title: string | null
+  description: string | null
+  keywords: string [] | null
+}
+
+const metas: MetaType = {
+  title: "Carrosséis",
+  description: null,
+  keywords : [
+    "baixar carrossel do Instagram",
+    "download carrossel Instagram",
+    "salvar carrossel Instagram",
+    "baixar álbum Instagram",
+    "baixar galeria Instagram",
+    "baixar postagens múltiplas Instagram",
+    "baixar várias fotos Instagram",
+    "baixar várias imagens Instagram",
+    "baixar carrossel Instagram grátis",
+    "baixar carrossel Instagram sem aplicativo",
+    "baixar carrossel Instagram com link",
+    "baixar carrossel Instagram para Android",
+    "baixar carrossel Instagram para iPhone",
+    "baixar carrossel Instagram para PC",
+    "baixar carrossel Instagram com áudio"
+  ]
+}
+
+export const metadata: Metadata = GenerateMetadata(metas);
+
 export default function page() {
   return (
     <>
