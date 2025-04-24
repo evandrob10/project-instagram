@@ -15,7 +15,7 @@ export default function Nav() {
     const itemsNav : NavTypes = [
         {
             url: "/",
-            text: "VIDEOS"
+            text: "VÍDEOS"
         },
         {
             url: "/imagens",
@@ -26,12 +26,8 @@ export default function Nav() {
             text: "REALS"
         },
         {
-            url: "/multi-videos",
-            text: "MULTI VIDEOS"
-        },
-        {
-            url: "/multi-imagens",
-            text: "MULTI IMAGENS"
+            url: "/carrosseis",
+            text: "CARROSSÉIS"
         }
     ]
 

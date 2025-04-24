@@ -1,6 +1,6 @@
 'use client'
 //Components
-import { H3 } from "../Titles"
+import { H2, H3 } from "../Titles"
 import Paragrafo from "../Paragrafo"
 //Hooks
 import { useState } from 'react'
@@ -46,6 +46,7 @@ export default function Quests() {
 
     return (
         <>
+            <H2 text="Perguntas Frequentes sobre o InstaSave Hub" />
             {quests.map((element, index) => (
                 <div key={index}>
                     <H3 text={element.quest} p1={'p' + index} onClickId={handlerClickId} />

@@ -144,7 +144,6 @@ export default function page() {
           <Paragrafo>O <strong>InstaSave Hub</strong> é a solução ideal para quem deseja baixar vídeos do Instagram de forma rápida, segura e gratuita. Com uma interface simples e suporte a diversos formatos de conteúdo, ele atende tanto usuários casuais quanto criadores de conteúdo. Ao seguir este guia, você pode aproveitar ao máximo a ferramenta, seja para assistir vídeos offline, arquivar conteúdos ou criar novos projetos.<Links text=' Veja como baixar vários vídeos ao mesmo tempo' url='/multi-videos'/></Paragrafo>
         </Section>
         <Section>
-          <H2 text="Perguntas Frequentes sobre o InstaSave Hub" />
           <Quests />
         </Section>
       </Content>

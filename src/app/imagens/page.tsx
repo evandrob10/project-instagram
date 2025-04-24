@@ -62,7 +62,7 @@ export default function page() {
               src={"/imagens/page-imagens/baixar-imagem-tutorial.png"}
               alt='Campo input da instaSave Hub'
             />
-            <Li>Pronto, agora você consegue salvar imagem em seu dispositivo.</Li>
+            <Li>Clique com o botão direito e selecione Salvar Imagem Como ou use o botão de download fornecido.</Li>
           </Ol>
         </Section>
 
@@ -93,7 +93,6 @@ export default function page() {
           <Paragrafo>O <strong>InstaSave Hub</strong> é a ferramenta ideal para baixar imagens do Instagram de forma prática e segura. Com este guia, você pode salvar fotos para uso offline, arquivamento ou projetos criativos. <Links text='Saiba como baixar multiplicas imagens de forma gratuita.' url='/multi-imagens' /></Paragrafo>
         </Section>
         <Section>
-          <H2 text="Perguntas Frequentes sobre o InstaSave Hub" />
           <Quests />
         </Section>
       </Content>

@@ -11,13 +11,15 @@ export default function Pagination() {
 
     const error = useSearchParams().get("error");
     
-    function getNamePage(){
-        return pathname.replace("/","");
+    function getNamePage(){   
+        let path = pathname.replace("/","");
+        if(path === "carrosseis") path = "carroséis"; 
+        return path;
     }
 
     return (
         <>
-            <ContainerDownload itemDownload={pathname == "/" ? "videos" :  getNamePage()} error={error} />
+            <ContainerDownload itemDownload={pathname == "/" ? "vídeos" :  getNamePage()} error={error} />
         </>
     );
 }
