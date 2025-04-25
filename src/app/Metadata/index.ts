@@ -13,7 +13,8 @@ export default function GenerateMetadata({title, description, keywords} : MetaTy
   const descriptionPage = description ? description : 'InstaSave Hub é uma plataforma online simples e eficiente que permite baixar vídeos do Instagram de forma rápida e segura, direto do seu navegador.'
   const Metadata : Metadata = {
     title : titlePage,
-    description : descriptionPage,  
+    description : descriptionPage,
+    metadataBase: new URL('http://localhost:3000'),  
     keywords: keywords ? keywords : [
       "baixar vídeos do Instagram",
       "download Instagram",
@@ -35,7 +36,6 @@ export default function GenerateMetadata({title, description, keywords} : MetaTy
         "max-image-preview": "large",
       },
     },
-    viewport: "width=device-width, initial-scale=1",
     icons: {
       icon: [
         { url: "/favicon.ico" }, // Favicon estándar

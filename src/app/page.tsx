@@ -13,6 +13,7 @@ import Section from './Components/Content/Components/Section';
 import { Li, Ol, Ul } from './Components/Content/Components/Listas';
 import Links from './Components/Content/Components/Links';
 import Quests from './Components/Content/Components/Quests';
+import SuspenseWrapper from './Components/SuspenseWrapper';
 
 
 interface MetaType {
@@ -24,7 +25,7 @@ interface MetaType {
 const metas: MetaType = {
   title: "Vídeos",
   description: null,
-  keywords : [
+  keywords: [
     "baixar vídeos do Instagram",
     "download Instagram",
     "salvar vídeos Instagram",
@@ -48,7 +49,9 @@ export const metadata: Metadata = GenerateMetadata(metas);
 export default function page() {
   return (
     <>
-      <Pagination />
+      <SuspenseWrapper>
+        <Pagination />
+      </SuspenseWrapper>
       <Content>
         <Header>
           <div className="mx-auto px-3">
@@ -140,7 +143,7 @@ export default function page() {
           <Ol>
             <Li><strong>Interface Amigável:</strong> A interface do InstaSave Hub é projetada para ser intuitiva, mesmo para usuários com pouca experiência em tecnologia. O campo de input é claramente visível, e o processo de download é direto</Li>
             <Li><strong>Downloads em Alta Qualidade:</strong> O InstaSave Hub garante que os vídeos sejam baixados na melhor qualidade disponível, preservando a resolução original do conteúdo.</Li>
-            <Li><strong>Suporte a Múltiplos Formatos: </strong> Além de vídeos, o InstaSave Hub também suporta o download de <Links text='fotos' url='/imagens'/> , stories e IGTVs, tornando-o uma ferramenta versátil para todos os tipos de conteúdo do Instagram.</Li>
+            <Li><strong>Suporte a Múltiplos Formatos: </strong> Além de vídeos, o InstaSave Hub também suporta o download de <Links text='fotos' url='/imagens' /> , stories e IGTVs, tornando-o uma ferramenta versátil para todos os tipos de conteúdo do Instagram.</Li>
             <Li><strong>Compatibilidade Multiplataforma: </strong> Seja você um usuário de Android, iOS, Windows ou Mac, o InstaSave Hub funciona perfeitamente em qualquer dispositivo com acesso à internet.</Li>
             <Li><strong>Privacidade e Segurança: </strong> O InstaSave Hub não armazena os vídeos baixados nem compartilha suas informações pessoais, garantindo uma experiência segura.</Li>
           </Ol>
@@ -176,7 +179,7 @@ export default function page() {
         </Section>
         <Section>
           <Paragrafo>O <strong>InstaSave Hub</strong> é a solução ideal para quem deseja baixar vídeos do Instagram de forma rápida, segura e gratuita. Com uma interface simples e suporte a diversos formatos de conteúdo, ele atende tanto usuários casuais quanto criadores de conteúdo. Ao seguir este guia, você pode aproveitar ao máximo a ferramenta, seja para assistir vídeos offline, arquivar conteúdos ou criar novos projetos.</Paragrafo>
-          <Links text='Veja como baixar vídeos dos carrosséis do Instagram.' url='/carroséis'/>
+          <Links text='Veja como baixar vídeos dos carrosséis do Instagram.' url='/carroséis' />
         </Section>
         <Section>
           <Quests />

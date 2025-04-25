@@ -19,21 +19,21 @@ export default async function download({searchParams} : { searchParams : PropsTy
 
     if (data.url_list.length == 1) {
       return (
-        <section className="min-h-[92vh] mt-[10vh] sm:mt-[0] flex flex-col justify-center items-center py-5">
-
-          <figure className="overflow-hidden">
+        <section className="min-h-[84vh] xl:h-[80vh] 2xl:min-h-[84vh] flex flex-col justify-center items-center">
+          <figure className="overflow-hidden flex justify-center items-center h-[80%]">
             <Image
               alt=""
               width={300}
               height={650}
               src={data.media_details[0].thumbnail && data.media_details[0].type !== "image" ? data.media_details[0].thumbnail : data.media_details[0].url}
+              className="h-[25rem] sm:h-[20rem] 2xl:h-[32rem]"
               style={{
-                objectFit: "cover",
+                objectFit: "contain",
                 transform: "scale(1.1)",
               }}
             />
           </figure>
-          <div className="mt-5 w-3xs flex justify-between">
+          <div className="mt-2 w-3xs flex justify-evenly h-[20%]">
             <Button url={urlBack} bgCor="bg-gray-500" text="VOLTAR" opacity="opacity-50" />
             <Button url={data.url_list[0]} bgCor="bg-insta-buttons" text="BAIXAR" target="_blank" />
           </div>

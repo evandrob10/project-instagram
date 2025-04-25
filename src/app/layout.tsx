@@ -1,9 +1,13 @@
 import "./globals.css";
+import { Viewport } from "next";
 //COMPONENTS
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import BackTop from "./Components/BackTop";
 
+export const viewport: Viewport = {
+  themeColor: '#colorHere',
+}
 
 
 export default function RootLayout({

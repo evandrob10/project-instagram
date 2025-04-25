@@ -12,18 +12,19 @@ import Quests from '../Components/Content/Components/Quests';
 
 import { Metadata } from 'next';
 import GenerateMetadata from '../Metadata';
+import SuspenseWrapper from "../Components/SuspenseWrapper";
 
 
 interface MetaType {
   title: string | null
   description: string | null
-  keywords: string [] | null
+  keywords: string[] | null
 }
 
 const metas: MetaType = {
   title: "Carrosséis",
   description: null,
-  keywords : [
+  keywords: [
     "baixar carrossel do Instagram",
     "download carrossel Instagram",
     "salvar carrossel Instagram",
@@ -47,7 +48,9 @@ export const metadata: Metadata = GenerateMetadata(metas);
 export default function page() {
   return (
     <>
-      <Pagination />
+      <SuspenseWrapper>
+        <Pagination />
+      </SuspenseWrapper>
       <Content>
         <Header>
           <div className="mx-auto px-3">
@@ -156,7 +159,7 @@ export default function page() {
           <Paragrafo>
             Com o <strong>InstaSave Hub</strong>, baixar vídeos e imagens de carrosséis do Instagram é um processo simples e rápido. Basta copiar o link, colar no site, escolher o conteúdo e salvar. Experimente hoje e aproveite seus conteúdos favoritos offline!
           </Paragrafo>
-          <Links text='Veja como baixar um vídeo do Instagram.' url='/'/>
+          <Links text='Veja como baixar um vídeo do Instagram.' url='/' />
         </Section>
         <Section>
           <Quests />

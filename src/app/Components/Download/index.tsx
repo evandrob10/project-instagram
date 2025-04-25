@@ -16,7 +16,7 @@ export default function ContainerDownload({ itemDownload, error }: { itemDownloa
     const router = useRouter();
 
     useEffect(() => { if (url.length > 0) setControlError(false); }, [url])
-    useEffect(() => { if (urlValid) router.push(`/download?page=${itemDownload}&url=${url}`) }, [url])
+    useEffect(() => { if (urlValid) router.push(`/download?page=${itemDownload}&url=${url}`) }, [url, urlValid, router, itemDownload])
 
     const message = <p className="text-[red] text-[18px] mt-3">URL inserida é inválida!</p>;
 

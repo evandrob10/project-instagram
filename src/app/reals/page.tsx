@@ -13,18 +13,19 @@ import Quests from '../Components/Content/Components/Quests';
 
 import { Metadata } from 'next';
 import GenerateMetadata from '../Metadata';
+import SuspenseWrapper from "../Components/SuspenseWrapper";
 
 
 interface MetaType {
   title: string | null
   description: string | null
-  keywords: string [] | null
+  keywords: string[] | null
 }
 
 const metas: MetaType = {
   title: "Reals",
   description: null,
-  keywords : [
+  keywords: [
     "baixar Reels do Instagram",
     "download Reels Instagram",
     "salvar Reels Instagram",
@@ -48,7 +49,9 @@ export const metadata: Metadata = GenerateMetadata(metas);
 export default function page() {
   return (
     <>
-      <Pagination />
+      <SuspenseWrapper>
+        <Pagination />
+      </SuspenseWrapper>
       <Content>
         <Header>
           <div className="mx-auto px-3">
@@ -144,7 +147,7 @@ export default function page() {
 
         <Section>
           <Paragrafo>O <strong>InstaSave Hub</strong> é a melhor escolha para baixar Reels do Instagram de forma prática e segura. Com este guia, você está pronto para salvar seus vídeos favoritos e usá-los como quiser. </Paragrafo>
-          <Links text='Veja como baixar uma imagem do Instagram.' url='/imagens'/>
+          <Links text='Veja como baixar uma imagem do Instagram.' url='/imagens' />
         </Section>
         <Section>
           <Quests />

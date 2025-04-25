@@ -11,18 +11,19 @@ import Pagination from "../Components/Pagination";
 import Quests from '../Components/Content/Components/Quests';
 import { Metadata } from 'next';
 import GenerateMetadata from '../Metadata';
+import SuspenseWrapper from '../Components/SuspenseWrapper';
 
 
 interface MetaType {
   title: string | null
   description: string | null
-  keywords: string [] | null
+  keywords: string[] | null
 }
 
 const metas: MetaType = {
   title: "Imagens",
   description: null,
-  keywords : [
+  keywords: [
     "baixar imagens do Instagram",
     "download Instagram",
     "salvar imagens Instagram",
@@ -46,7 +47,9 @@ export const metadata: Metadata = GenerateMetadata(metas);
 export default function page() {
   return (
     <>
-      <Pagination />
+      <SuspenseWrapper>
+        <Pagination />
+      </SuspenseWrapper>
       <Content>
         <Header>
           <div className="mx-auto px-3">
@@ -124,7 +127,7 @@ export default function page() {
         </Section>
         <Section>
           <Paragrafo>O <strong>InstaSave Hub</strong> é a ferramenta ideal para baixar imagens do Instagram de forma prática e segura. Com este guia, você pode salvar fotos para uso offline, arquivamento ou projetos criativos. </Paragrafo>
-          <Links text='Veja como baixar imagens dos carrosséis do Instagram.' url='/carroséis'/>
+          <Links text='Veja como baixar imagens dos carrosséis do Instagram.' url='/carroséis' />
         </Section>
         <Section>
           <Quests />
