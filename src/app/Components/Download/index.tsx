@@ -15,8 +15,8 @@ export default function ContainerDownload({ itemDownload, error }: { itemDownloa
 
     const itemSemAcento = itemDownload
         .replace(/í/g, "i")
-        .replace(/é/g, "e");
-        
+        .replace("é", "se");
+
     const router = useRouter();
 
     useEffect(() => { if (url.length > 0) setControlError(false); }, [url])
