@@ -22,8 +22,8 @@ export default function Nav() {
             text: "IMAGENS"
         },
         {
-            url: "/reals",
-            text: "REALS"
+            url: "/reels",
+            text: "REELS"
         },
         {
             url: "/carrosseis",
