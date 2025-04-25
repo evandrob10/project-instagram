@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "git pull origin main && npm install && npm run build"
   },
   "dependencies": {
     "instagram-url-direct": "^2.0.2",
