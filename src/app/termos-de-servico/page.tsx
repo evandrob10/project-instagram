@@ -63,7 +63,7 @@ const page = () => {
       <Section>
         <H2 text="3. Isenção de Responsabilidade" />
         <Ol>
-          <Li>Os materiais no site do INSTASAVER HUB são fornecidos "como estão". O site não oferece garantias, expressas ou implícitas, incluindo garantias de comercialização, adequação a um fim específico ou não violação de direitos.</Li>
+          <Li>Os materiais no site do INSTASAVER HUB são fornecidos <strong>como estão</strong>. O site não oferece garantias, expressas ou implícitas, incluindo garantias de comercialização, adequação a um fim específico ou não violação de direitos.</Li>
           <Li>Além disso, o INSTASAVER HUB não garante a precisão, resultados prováveis ou confiabilidade do uso dos materiais, nem se responsabiliza por sites vinculados.</Li>
         </Ol>
       </Section>

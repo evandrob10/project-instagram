@@ -7,11 +7,13 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "git pull origin main && npm install && npm run build"
+    "postbuild" : "next-sitemap",
+    "deploy": "git pull origin main && npm install && npm run build && pm2 restart project-instagram"
   },
   "dependencies": {
     "instagram-url-direct": "^2.0.2",
     "next": "15.3.0",
+    "next-sitemap": "^4.2.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
