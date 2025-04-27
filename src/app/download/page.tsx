@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { redirect } from 'next/navigation'
-import { instagramGetUrl } from "instagram-url-direct";
+import { instagramGetUrl } from "../../utils/instagram-url-direct";
 
 //Components
 import Button from "../Components/Download/Components/Button";
